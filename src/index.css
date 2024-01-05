@@ -1,13 +1,57 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: plum;
+  font-family: "Times New Roman", Times, serif;
+  color: aliceblue;
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App */
+.app {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.187);
+  background-color: rgb(71, 151, 221);
+  border-radius: 5px;
+}
+/* Form */
+.form {
+  display: flex;
+  padding: 20px;
+}
+.input {
+  flex: 1;
+  border-radius: 6px;
+  background-color: antiquewhite;
+  border: none;
+  font-size: 18px;
+  text-indent: 10px;
+}
+.btn {
+  width: 200px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+  background-color: antiquewhite;
+  border: none;
+  font-size: 18px;
+  color: grey;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  text-align: center;
+}
+/* City */
+h1 {
+  color: rgb(237, 185, 237);
+}
+
+/* Update, Condition, Humidity, Wind */
+.left-column,
+.right-column {
+  padding-top: 40px;
 }
