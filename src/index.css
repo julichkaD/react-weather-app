@@ -1,5 +1,5 @@
 body {
-  background-color: plum;
+ background: linear-gradient(108.9deg, rgb(163, 217, 221) 10.4%, rgb(174, 250, 182) 56.2%, rgb(238, 243, 220) 90.1%);
   font-family: "Times New Roman", Times, serif;
   color: aliceblue;
   font-weight: 500;
@@ -9,11 +9,12 @@ body {
 /* App */
 .app {
   max-width: 1400px;
-  margin: 20px auto;
-  padding: 40px;
+  margin: 70px auto;
+  padding: 80px;
   border: 1px solid rgba(0, 0, 0, 0.187);
-  background-color: rgb(71, 151, 221);
-  border-radius: 5px;
+  background-color: rgb(17, 89, 37);
+  border-radius: 15px;
+
 }
 /* Form */
 .form {
@@ -47,12 +48,12 @@ body {
 }
 /* City */
 h1 {
-  color: rgb(237, 185, 237);
+  color:  #32f19b; 
   font-size: 50px;
 }
 h2 {
    font-size: 40px;
-   color: rgb(210, 182, 236);
+   color: rgb(224, 199, 247);
 }
 h3 {
   font-size: 30px;
