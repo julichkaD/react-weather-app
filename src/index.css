@@ -1,6 +1,6 @@
 body {
- background: linear-gradient(108.9deg, rgb(163, 217, 221) 10.4%, rgb(174, 250, 182) 56.2%, rgb(238, 243, 220) 90.1%);
-  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(225, 245, 212);
+font-family: "Times New Roman", Times, serif;
   color: aliceblue;
   font-weight: 500;
   letter-spacing: 3px;
@@ -14,7 +14,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.187);
   background-color: rgb(17, 89, 37);
   border-radius: 15px;
-
 }
 /* Form */
 .form {
@@ -48,12 +47,12 @@ body {
 }
 /* City */
 h1 {
-  color:  #32f19b; 
+  color: #32f19b;
   font-size: 50px;
 }
 h2 {
-   font-size: 40px;
-   color: rgb(224, 199, 247);
+  font-size: 40px;
+  color: rgb(224, 199, 247);
 }
 h3 {
   font-size: 30px;
