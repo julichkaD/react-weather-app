@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 function Weather(props) {
-  const [loaded, setLoaded] = useState(false);
   const [weatherData, setWeatherData] = useState({loaded: false});
 
   function handleResponse(response) {
@@ -11,13 +11,12 @@ function Weather(props) {
       loaded: true,
       temperature: response.data.main.temp,
       city: response.data.name,
-      date: "Monday 07:00",
+      date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].main,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-    setLoaded(true);
   }
 
   if (weatherData.loaded) {
@@ -31,7 +30,7 @@ function Weather(props) {
         </form>
         <div className="grid">
           <div className="left-column">
-            <h3>Last update:{weatherData.date}</h3>
+            <h3><FormattedDate date = {weatherData.date} /></h3>
             <h3>{weatherData.description}</h3>
           </div>
           <div className="center">
