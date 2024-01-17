@@ -73,11 +73,10 @@ span {
   font-weight: 300;
   font-size: 30px;
   padding: 5px;
- 
 }
 
 a {
-  color: rgb(8, 70, 8)
+  color: rgb(8, 70, 8);
 }
 /* Days */
 .days {
