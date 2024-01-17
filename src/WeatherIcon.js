@@ -23,8 +23,8 @@ export default function WeatherIcon(props) {
     "50d": "fog",
     "50n": "fog",
   };
-  console.log("Icon Code:", props.code);
-  console.log("Mapped Icon:", codeMapping[props.code]);
+//   console.log("Icon Code:", props.code);
+//   console.log("Mapped Icon:", codeMapping[props.code]);
 
   return (
     <WeatherSvg state={codeMapping[props.code]} width={120} height={120} />
