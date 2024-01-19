@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
+import DaysForecast from "./DaysForecast";
 
 function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -16,7 +17,7 @@ function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].main,
-      icon: response.data.weather[0].icon
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -39,10 +40,11 @@ function Weather(props) {
         <form  onSubmit={handleSubmit} className="form" action="search">
           <input onChange={showCity} className="input" name="query" placeholder="Type a city.." autoFocus="on"/>
           <button className="btn" type="submit">
-            Search
+            SEARCH
           </button>
         </form>
         <WeatherInfo data={weatherData} />
+        <DaysForecast />
       </div>
     );
   } else {
