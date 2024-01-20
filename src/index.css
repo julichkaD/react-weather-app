@@ -81,13 +81,16 @@ a {
 }
 /*DayForecast*/
 .temperature-day {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .max-temp,
 .min-temp {
   font-size: 22px;
   color: #065635;
   letter-spacing: 3px;
+}
+.min-temp{
+  opacity: 0.6;
 }
 .daysForecast {
   display: grid;
