@@ -95,14 +95,14 @@ a {
 .daysForecast {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 35px;
+  margin-left: 20px;
   padding-top: 20px ;
 }
 .day {
   background-color: #07bd71;
   border: 1px solid #07bd71;
   border-radius: 10px;
-  padding: 8px 15px;
+  padding: 12px 50px;
   text-align: center;
 }
 .day h3 {
