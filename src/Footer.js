@@ -11,7 +11,12 @@ export default function Footer() {
       >
         GitHub
       </a>
-      &nbsp;by Julia Darwish, hosted on&nbsp;
+      &nbsp;by&nbsp;
+      <a href="https://github.com/julichkaD" target="_blank" rel="noreferrer">
+        {" "}
+        Julia Darwish
+      </a>{" "}
+      , hosted on&nbsp;
       <a
         href="https://react-weather-app-jd.netlify.app/"
         target="_blank"
