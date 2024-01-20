@@ -13,12 +13,20 @@ export default function DaysForecast(props) {
   }
 
   if (loaded) {
-    return <DayWeather data={forecast[0]} />;
+    return (
+      <div className="daysForecast">
+        {forecast.map(function(data, index) {
+          if (index <5 )
+          return <DayWeather data={data} key={index}/>;
+        })}
+      </div>
+    );
   } else {
-    let apiKey = "b58a2f047af526to478d86be21c3e75d";
-    let longtitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longtitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+    let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
+    let lon = props.coordinates.lon;
+    let lat = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    console.log(apiUrl);
 
     axios.get(apiUrl).then(handleRequest);
   }

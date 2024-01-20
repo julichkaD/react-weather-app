@@ -22,10 +22,10 @@ function Weather(props) {
     });
   }
 
-  function search(){
-     const apiKey = "6e6ec494746b5229a9f2d526478c924c";
-     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-     axios.get(apiUrl).then(handleResponse);
+  function search() {
+    const apiKey = "6e6ec494746b5229a9f2d526478c924c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -38,14 +38,20 @@ function Weather(props) {
   if (weatherData.loaded) {
     return (
       <div className="Weather">
-        <form  onSubmit={handleSubmit} className="form" action="search">
-          <input onChange={showCity} className="input" name="query" placeholder="Type a city.." autoFocus="on"/>
+        <form onSubmit={handleSubmit} className="form" action="search">
+          <input
+            onChange={showCity}
+            className="input"
+            name="query"
+            placeholder="Type a city.."
+            autoFocus="on"
+          />
           <button className="btn" type="submit">
             SEARCH
           </button>
         </form>
-        <WeatherInfo data ={weatherData} />
-        <DaysForecast coordinates = {weatherData.coordinates}/>
+        <WeatherInfo data={weatherData} />
+        <DaysForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
