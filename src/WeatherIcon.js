@@ -8,10 +8,10 @@ export default function WeatherIcon(props) {
     "01n": "clear-night",
     "02d": "cloudy",
     "02n": "cloudy",
-    "03d": "cloudy",
+    "03d": "partlycloudy",
     "03n": "cloudy",
     "04d": "partlycloudy",
-    "04n": "partlycloudy",
+    "04n": "cloudy",
     "09d": "pouring",
     "09n": "pouring",
     "10d": "rainy",
@@ -23,11 +23,11 @@ export default function WeatherIcon(props) {
     "50d": "fog",
     "50n": "fog",
   };
-  console.log("Icon Code:", props.code);
-  console.log("Mapped Icon:", codeMapping[props.code]);
+//   console.log("Icon Code:", props.code);
+//   console.log("Mapped Icon:", codeMapping[props.code]);
 
   return (
-    <WeatherSvg state={codeMapping[props.code]} width={120} height={120} />
+    <WeatherSvg state={codeMapping[props.code]} width={props.width} height={props.height} />
   );
 
 }

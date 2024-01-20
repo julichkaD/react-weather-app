@@ -11,6 +11,7 @@ function Weather(props) {
     console.log(response.data);
     setWeatherData({
       loaded: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
@@ -43,8 +44,8 @@ function Weather(props) {
             SEARCH
           </button>
         </form>
-        <WeatherInfo data={weatherData} />
-        <DaysForecast />
+        <WeatherInfo data ={weatherData} />
+        <DaysForecast coordinates = {weatherData.coordinates}/>
       </div>
     );
   } else {
